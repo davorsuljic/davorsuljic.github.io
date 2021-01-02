@@ -1,0 +1,1048 @@
+:root {
+    --bodybackgroundcolor: rgb(234, 234, 222);
+    --fontcolor: rgb(53, 49, 46);
+    --fontbackgroundcolorred: rgb(243,70,46);
+    --fontbackgroundcolorblue: rgb(38,114,137);
+    --fontbackgroundcoloryellow: rgb(243,183,60);
+
+    --borderwidth: 10px;
+    --charwidth: 60px;
+    --charheight: 100px;
+
+    --borderwidth: 10px;
+    --charwidth: 80px;
+    --charheight: 130px;
+
+    --borderwidth: 13px;
+    --charwidth: 55px;
+    --charheight: 89px;
+
+    --borderwidth: 8px;
+    --charwidth: 34px;
+    --charheight: 55px;
+    --charwidth: 55px;
+    --charheight: 89px;
+
+    --negativecharwidth: calc(var(--charwidth) * -1);
+    --negativeborderwidth: calc(var(--borderwidth) * -1);
+    --borderstyle: solid;
+    --transparentborder: var(--borderwidth) var(--borderstyle) rgba(0, 0, 0, 0); 
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  font-family: sans-serif;
+  background-color: var(--bodybackgroundcolor);
+}
+
+.alphabet {
+  width: 80vw;
+  margin: 10vw auto;
+}
+
+.alphabetchar {
+  display: inline-block;
+  width: var(--charwidth);
+  height: var(--charheight);
+  border: var(--borderwidth) var(--borderstyle) var(--fontcolor);
+  margin: var(--charwidth) var(--borderwidth);
+  position: relative;
+  color: rgba(0, 0, 0, 0);
+  font-size: 100px;
+}
+
+.capital {
+  height: calc(var(--charheight) + var(--charwidth) - var(--borderwidth));
+  top: calc(var(--negativecharwidth) + var(--borderwidth));
+}
+
+.alphabetchar::before,
+.alphabetchar::after,
+.capital::before,
+.capital::after {
+  content: '';
+  position: absolute;
+}
+
+.capital::before,
+.capital::after {
+  width: inherit;
+  height: inherit;
+
+}
+
+.capitalA,
+.capitalM,
+.capitalN,
+.capitalG::after,
+.capitalQ::before,
+.capitalT::before,
+.capitalY::before,
+.capitalOE::before,
+.oe::before,
+.capitalAE,
+.capitalAE::after,
+.capitalAA {
+  border: var(--borderwidth) var(--borderstyle) var(--fontcolor);
+}
+
+.capitalA,
+.capitalM,
+.capitalN,
+.capitalAE,
+.capitalAA {
+  border-radius: 0 100% 0 0 / 0 67.5% 0 0;
+  border-radius: 100% 100% 0 0 / 37.5% 37.5% 0 0;
+}
+
+.capitalD {
+  border-radius: 0 100% 100% 0 / 0 67.5% 67.5% 0;
+  border-radius: 0 75% 75% 0 / 0 50% 50% 0;
+  border-radius: 0 37.5% 37.5% 0 / 0 50% 50% 0; /*serif*/
+  border-radius: 0 50% 50% 0 / 0 37.5% 37.5% 0;
+  border-radius: 0 50% 50% 0 / 0 25% 25% 0;
+}
+
+
+.capitalB,
+.capitalH,
+.capitalI,
+.capitalK,
+.capitalL,
+/*.capitalN::before,*/
+.capitalP,
+.capitalR,
+.capitalT::before,
+.capitalU,
+.capitalV,
+.capitalW,
+.capitalW::after,
+.capitalX,
+.capitalY,
+.capitalY::before,
+.u,
+.v,
+.x,
+.y,
+.w,
+.w::after,
+.capitalOE::before,
+.oe::before {
+  border-top: 0;
+}
+
+.capitalB,
+.capitalE,
+.capitalF,
+.capitalI,
+.capitalK,
+.capitalL,
+.capitalP,
+.capitalR,
+.capitalT,
+.capitalT::before,
+.capitalAE::after {
+  border-right: 0;
+}
+
+.capitalA,
+.capitalB,
+.capitalF,
+.capitalG::after,
+.capitalH,
+.capitalI,
+.capitalK,
+.capitalM,
+.capitalN,
+.capitalP,
+.capitalR,
+.capitalT,
+.capitalT::before,
+.capitalY,
+.capitalAE,
+.capitalAA {
+  border-bottom: 0;
+}
+
+.capitalG::after,
+/*.capitalN::before,*/
+.capitalT,
+.capitalY,
+.capitalOE::before,
+.oe::before {
+  border-left: 0;
+}
+
+.capitalB,
+.capitalH,
+.capitalI,
+.capitalJ,
+.capitalK,
+.capitalL,
+.capitalP,
+.capitalR,
+.capitalU,
+.capitalV,
+.capitalW,
+.capitalW::after,
+.capitalX,
+.capitalY,
+.capitalAE::after {
+  top: var(--negativecharwidth);
+}
+
+.capitalG::after,
+.capitalQ::before {
+  width: calc(var(--charwidth) - var(--borderwidth) * 2);
+  height: var(--charwidth);
+  right: var(--negativeborderwidth);
+  bottom: var(--negativeborderwidth);
+}
+
+.capitalI {
+  margin-right: calc(var(--negativecharwidth) + var(--borderwidth));
+}
+
+.capitalJ {
+  border-top: 0;
+  border-left: var(--transparentborder);
+  border-radius: 0 0 100% 100% / 0 0 37.5% 37.5%;
+}
+
+.capitalM {
+  margin-right: var(--charwidth);
+  filter: drop-shadow(calc(var(--charwidth) - var(--borderwidth)) 0 0 var(--fontcolor));
+}
+
+/*.capitalM::before {
+  border: var(--borderwidth) var(--borderstyle) var(--fontcolor);
+  border-bottom: 0;
+  border-radius: 100% 0 0 0 / 67.5% 0 0 0;
+  top: var(--negativeborderwidth);
+  left: calc(var(--charwidth) - var(--borderwidth) * 2);
+}*/
+
+/*.capitalN::before,*/
+.capitalT::before,
+.capitalOE::before,
+.oe::before,
+.capitalAE::after {
+  top: var(--negativeborderwidth);
+}
+
+/*.capitalN::before {
+  border-right: var(--borderwidth) var(--borderstyle) var(--fontcolor);
+  right: var(--negativeborderwidth);
+}*/
+
+.capitalC,
+.capitalG,
+.capitalO,
+.capitalQ,
+.capitalOE {
+  border-radius: 100% 100% 100% 100% / 37.5% 37.5% 37.5% 37.5%;
+}
+
+.capitalQ::before {
+  border-radius: 0 50% 0 50% / 0 31.25% 0 31.25%;
+  border-radius: 0 100% 0 100% / 0 67.5% 0 67.5%;
+}
+
+.capitalQ::before {
+    border-radius: 50%;
+    /* border-radius: 0 100% 100% 100% / 0 67.5% 67.5% 67.5%; */
+    width: var(--charwidth);
+    left: calc(var(--charwidth) / 3);
+    transform: rotate(45deg);
+    border-top: var(--transparentborder);
+    border-right: var(--transparentborder);
+    border-left: var(--transparentborder);
+}
+
+.capitalT::before {
+  left: calc(var(--charwidth) / 2 - var(--borderwidth) / 2);
+}
+
+.capitalS,
+.capitalX,
+.capitalY::before,
+.capitalZ {
+  height: var(--charheight);  
+}
+
+.oe::before,
+.capitalAE::after {
+  width: inherit;
+  height: inherit;
+}
+
+.nl {
+  width: 100%;
+  height: 0;
+  margin: 0;
+  border: 0;
+}
+
+.a,
+.d,
+.g,
+.ae,
+.aa {
+  border-radius: 100% 100% 0 100% / 50% 50% 0 50%;
+}
+
+.b {
+border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
+}
+
+.b::before,
+.d::before,
+.h::before {
+  top: var(--negativecharwidth);
+  height: var(--charheight);
+  height: calc(var(--charheight) + var(--charwidth) - var(--borderwidth));
+  border-radius: 0;
+}
+
+.b::before,
+.h::before,
+.k::before,
+.capitalOE::before,
+.oe::before {
+  left: var(--negativeborderwidth);
+}
+
+.d::before {
+  right: var(--negativeborderwidth);
+}
+
+.c,
+.o {
+  border-radius: 100% / 50%;
+}
+
+.capitalC,
+.c,
+.capitalG {
+  border-right: var(--transparentborder); 
+}
+
+.capitalC,
+.c,
+.i {
+  margin-right: calc(var(--borderwidth) * -0.75);
+}
+
+.m::after {
+  width: var(--charwidth);
+  height: var(--charheight);
+  top: var(--negativeborderwidth);
+  left: calc(var(--charwidth) - var(--borderwidth) * 2);
+  border: var(--borderwidth) var(--borderstyle) var(--fontcolor);
+  margin: 0;
+}
+
+.h,
+.m,
+.m::after,
+.n,
+.r {
+  border-bottom: 0;
+  border-radius: 100% 100% 0 0 / 50% 50% 0 0;
+}
+
+.f,
+.k,
+.l,
+.t {
+  border: 0;
+  border-left: var(--borderwidth) var(--borderstyle) var(--fontcolor);
+}
+
+.f {
+  height: calc(var(--charheight) + var(--charwidth) * 2 - var(--borderwidth) - 3px);
+  top: calc(var(--negativecharwidth) + 3px);
+  margin-right: calc(var(--borderwidth) * -2.75);
+  margin-left: calc(var(--borderwidth) * 1.25);
+  border-top: var(--transparentborder); 
+  border-radius: 50% 0 0 0 / 14.25% 0 0 0;
+}
+
+.i,
+.j {
+  top: var(--negativeborderwidth);
+  border-top: 0;
+  border-left: 0;
+}
+
+.i {
+  width: var(--borderwidth);
+  border-bottom: 0;
+}
+
+.j {
+  width: calc(var(--charwidth) - var(--borderwidth));
+  height: calc(var(--charheight) + var(--charwidth) - 3px);
+  margin-left: calc(var(--borderwidth) * -3.25); 
+  border-bottom: var(--transparentborder); 
+  border-radius: 0 0 55% 0 / 0 0 20% 0;
+}
+
+.g::before,
+.four::before {
+  bottom: var(--negativecharwidth);
+  left: var(--negativeborderwidth); 
+  width: var(--charwidth);
+  height: var(--charwidth);
+  border: var(--borderwidth) var(--borderstyle) var(--fontcolor);
+  border-top: var(--transparentborder); 
+  border-radius: 50% 0 50% 0 / 50% 0 50% 0;
+}
+
+.u {
+  border-radius: 0 0 0 50% / 0 0 0 25%;
+  border-radius: 0 0 50% 50% / 0 0 25% 25%;
+}
+
+.k,
+.l,
+.t {
+  height: calc(var(--charheight) + var(--charwidth) - var(--borderwidth));
+  top: var(--negativecharwidth);
+  border-top: 0;
+  border-right: 0;
+}
+
+.l,
+.t {
+  height: calc(var(--charheight) + var(--charwidth));
+  border-radius: 0 0 0 55% / 0 0 0 20%;
+  border-bottom: var(--transparentborder); 
+  margin-left: 10px;
+  margin-right: calc(var(--charwidth) / -2);
+}
+
+.capitalK::before,
+.k::before {
+  width: var(--charwidth);
+  left: var(--negativeborderwidth);
+  border: var(--borderwidth) var(--borderstyle) var(--fontcolor);
+  border-top: 0;
+}
+
+.k::before {
+  height: calc(var(--charheight) / 2);
+  top: calc(var(--charwidth) - var(--borderwidth));
+  border-radius: 0 0 60% 0 / 0 0 65% 0;
+}
+
+.capitalK::before {
+  height: var(--charheight);
+  top: 0;
+  border-radius: 0 0 75% 0 / 0 0 50% 0;
+  border-radius: 0 0 62.5% 0 / 0 0 37.5% 0;
+  border-radius: 0 0 50% 0 / 0 0 37.5% 0;
+  border-radius: 0 0 50% 0 / 0 0 31.25% 0;
+}
+
+.capitalB::before,
+.capitalP::before,
+.capitalR::before {
+  height: var(--charwidth);
+  border-radius: 0 50% 50% 0 / 0 50% 50% 0;
+
+  height: var(--charheight);
+  border-radius: 0 50% 50% 0 / 0 37.5% 37.5% 0;
+  border-radius: 0 100% 100% 100% / 0 50% 50% 50%;
+  border-radius: 0 100% 100% 100% / 0 50% 50% 0;
+  border-radius: 0 50% 50% 0 / 0 25% 25% 0;
+  border-radius: 0 50% 50% 0 / 0 31.25% 31.25% 0;
+
+  left: var(--negativeborderwidth);
+  border: var(--borderwidth) var(--borderstyle) var(--fontcolor);
+  border-left: 0;
+}
+
+.capitalB::after,
+.capitalK::after,
+.k::after,
+.capitalR::after {
+  bottom: 0;
+}
+
+.capitalB::after,
+.capitalK::after,
+.k::after,
+.capitalR::after {
+  width: var(--charwidth);
+  left: var(--negativeborderwidth);
+  border: var(--borderwidth) var(--borderstyle) var(--fontcolor);
+}
+
+.capitalK::after,
+.k::after,
+.capitalR::after {
+  height: var(--charwidth);
+}
+
+.capitalB::after {
+  height: var(--charheight);
+  border-radius: 0 50% 50% 0 / 0 37.5% 37.5% 0;
+
+  height: var(--charwidth);
+  border-radius: 0 50% 50% 0 / 0 50% 50% 0;
+  
+}
+
+.capitalK::after,
+.k::after,
+.capitalR::after {
+  border-bottom: 0;
+  border-radius: 0 50% 0 0 / 0 50% 0 0;
+}
+
+.m,
+.ae {
+  margin-right: calc(var(--charwidth) - var(--borderwidth) / 2);
+}
+
+.p {
+  border-radius: 0 100% 100% 100% / 0 50% 50% 50%;
+}
+
+.q {
+  border-radius: 100% 0 100% 100% / 50% 0 50% 50%;
+}
+
+.p::before,
+.q::before,
+.y::before {
+  bottom: var(--negativecharwidth);
+  height: calc(var(--charwidth) + var(--borderwidth) * 2);
+  height: calc(var(--charheight) + var(--charwidth) - var(--borderwidth));
+}
+
+.ascender::before,
+.descender::before {
+  width: 0;
+  border-left: var(--borderwidth) var(--borderstyle) var(--fontcolor);
+  z-index: -1;
+}
+
+.p::before {
+  left: var(--negativeborderwidth);
+}
+
+.q::before,
+.y::before {
+  right: var(--negativeborderwidth);
+}
+
+.r {
+  border-right: var(--transparentborder); 
+  margin-right: calc(var(--borderwidth) / -2);
+}
+
+.capitalS,
+.s,
+.six {
+  border-right: var(--transparentborder);
+  border-bottom: var(--transparentborder); 
+}
+
+.six {
+  height: calc(var(--charheight) * 0.7);
+  border-radius: 100% 100% 100% 0 / 75% 75% 100% 0;
+  margin-top: calc(var(--borderwidth) * 3);
+}
+
+.eight {
+  width: calc(var(--charwidth) - var(--borderwidth));
+  height: calc(var(--charheight) / 2);
+  margin-top: var(--borderwidth);
+}
+
+.capitalS::after,
+.s::after,
+.capitalX::after,
+.x::after,
+.three::after,
+.six::after,
+.eight::after {
+  bottom: 0;
+  left: calc(var(--borderwidth) * -1.75);
+  width: var(--charwidth);
+  height: calc(var(--charheight) / 2);
+  border: var(--borderwidth) var(--borderstyle) var(--fontcolor);
+  margin-top: 0;
+}
+
+.capitalS {
+  border-radius: 100% / 50%;
+}
+
+.capitalS::after,
+.s,
+.three,
+.eight,
+.s::after,
+.three::after,
+.eight::after,
+.six::after {
+  border-radius: 50%;
+}
+
+.capitalS::after,
+.s:after {
+  border-left: var(--transparentborder); 
+  border-top: var(--transparentborder); 
+  top: calc(100% + var(--borderwidth));
+}
+
+.capitalS::after {
+  height: var(--charwidth);
+  top: 100%;
+  transform: rotate(4deg);
+}
+
+.six::after {
+  height: calc(var(--charheight) / 2 + var(--borderwidth));
+  top: calc(var(--charheight) / 2 - var(--borderwidth) * 2);
+  left: var(--negativeborderwidth);
+}
+
+.eight::after,
+.three::after {
+  height: calc(var(--charheight) / 2 + var(--borderwidth));
+  top: 100%;
+  left: calc(var(--borderwidth) * -1.5);
+}
+
+.three {
+  border-bottom: var(--transparentborder); 
+}
+
+.three,
+.three::after {
+  border-left: var(--transparentborder); 
+}
+
+.three::after {
+  border-top: var(--transparentborder); 
+  left: var(--negativeborderwidth);
+}
+
+.t {
+  margin-right: calc(var(--borderwidth) * -2);
+}
+
+.v,
+.w,
+.w::after,
+.x,
+.oe::before {
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+}
+
+.capitalX {
+  border-radius: 0 0 50% 50% / 0 0 50% 50%;
+  border-radius: 0 0 50% 50% / 0 0 67.5% 67.5%;  
+}
+
+.v,
+.w,
+.w::after,
+.capitalV,
+.capitalW,
+.capitalW::after,
+.capitalOE::before,
+.oe::before {
+  border-radius: 0 0 100% 0 / 0 0 67.5% 0;
+}
+
+.capitalU,
+.capitalY::before {
+  border-radius: 0 0 100% 100% / 0 0 37.5% 37.5%;
+  border-radius: 0 0 0 50% / 0 0 0 25%;
+}
+
+.u,
+.v,
+.w,
+.x,
+.y,
+.oe::before {
+  top: var(--negativeborderwidth);
+}
+
+.w,
+.capitalW,
+.capitalAE {
+  margin-right: var(--charwidth);
+}
+
+.w::after,
+.capitalW::after {
+  top: 0;
+}
+
+.capitalAE::before {
+  width: calc(var(--charwidth) * 2 - var(--borderwidth) * 3);
+}
+
+.capitalAE::after {
+  top: 0;
+  top: var(--negativeborderwidth);
+}
+
+.w::after,
+.capitalW::after {
+  width: inherit;
+  height: inherit;
+  border: inherit;
+}
+
+.w::after,
+.capitalW::after,
+.capitalAE::after {
+  right: var(--negativecharwidth);
+}
+
+/*.capitalX,*/
+.x {
+  height: calc(var(--charheight) / 2);
+  margin-top: var(--borderwidth);
+  margin-left: calc(var(--borderwidth) / -2);
+}
+
+.capitalX::after,
+.x::after {
+  height: calc(var(--charheight) / 2 + var(--borderwidth));
+  position: absolute;
+  top: 100%;
+  left: var(--negativeborderwidth);
+  border: var(--borderwidth) var(--borderstyle) var(--fontcolor);
+  border-bottom: 0;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+
+.y {
+  border-radius: 0 0 100% 100% / 0 0 50% 50%;
+}
+
+.e,
+.s,
+.z,
+.two,
+.three,
+.five,
+.seven {
+  height: calc(var(--charheight) / 2);
+  margin-top: var(--borderwidth);
+}
+
+.capitalZ,
+.z,
+.seven {
+  border-bottom: var(--transparentborder); 
+  border-left: 0;
+  border-radius: 0 0 100% 50% / 0 0 100% 50%;
+}
+
+.z {
+  top: 0;
+}
+
+.e {
+  border-radius: 50% 50% 0 0 / 50% 50% 0 0;
+}
+
+.capitalZ::after,
+.z::after,
+.e::after,
+.ae::after,
+.two::after,
+.five::after,
+.seven::after,
+.nine::after {
+  top: 100%;
+  left: 0;
+  width: calc(100% + var(--borderwidth));
+  height: calc(100% + var(--borderwidth) * 3);
+  border: var(--borderwidth) var(--borderstyle) var(--fontcolor);
+}
+
+.capitalZ::after,
+.z::after,
+.two::after,
+.five::after,
+.seven::after {
+  height: calc(var(--charheight) / 2);
+  top: calc(100% + var(--borderwidth));
+}
+
+.capitalZ::after,
+.z::after,
+.two::after,
+.seven::after {
+  border-top: var(--transparentborder); 
+  border-right: 0;
+  border-radius: 100% 50% 0 0 / 75% 0 0 0;
+}
+
+.e::after,
+.ae::after {
+  width: calc(100% + var(--borderwidth) * 2);
+  left: var(--negativeborderwidth);
+  border-top: var(--transparentborder); 
+  border-right: var(--transparentborder); 
+  border-radius: 0 0 90% 90% / 0 0 75% 75%;
+}
+
+.ae:after {
+  height: calc(var(--charheight) / 2);
+  left: 100%;
+  top: 50%;
+}
+
+.oe {
+  border-radius: 100% / 50%;
+}
+
+/*.capitalOE,
+.oe {
+  border-radius: 75% 0% 75% 0% / 50% 0% 50% 0%;
+  border-radius: 50% 0 50% 0 / 31.25% 0 31.25% 0;
+  border-radius: 50% 0 50% 0 / 25% 0 25% 0;
+}*/
+
+.ae:before {
+  width: calc(100% + var(--borderwidth) * 2);
+  width: var(--charwidth);
+  height: calc(var(--charheight) / 2);
+  top: var(--negativeborderwidth);
+  right: calc(var(--negativecharwidth) + var(--borderwidth) / 2);
+  border: var(--borderwidth) var(--borderstyle) var(--fontcolor);
+  border-radius: 100% 100% 0 0 / 100% 100% 0 0;
+  margin-right: calc(var(--borderwidth) / -2);
+}
+
+.capitalA::before,
+.capitalE::before,
+.capitalF::before,
+.capitalG::before,
+.capitalH::before,
+.capitalS::before,
+.capitalAE::before,
+.capitalAA::before,
+.f::after,
+.t::after {
+  left: 0;
+  height: 0;
+  border-top: var(--borderwidth) var(--borderstyle) var(--fontcolor);
+  border-radius: 0px;
+}
+
+.capitalA::before,
+.capitalH::before,
+.capitalAA::before {
+  width: var(--charwidth);
+  left: calc(var(--borderwidth) * -2);
+}
+
+.capitalE::before,
+.capitalF::before {
+  width: calc(var(--charwidth) - var(--borderwidth));  
+}
+
+.f::after,
+.t::after {
+  width: calc(var(--charwidth) - var(--borderwidth) * 2);
+  left: calc(var(--borderwidth) * -2);
+}
+
+.capitalG::before,
+.capitalS::before {
+  width: calc(var(--charwidth) - var(--borderwidth) * 2);
+  width: var(--charwidth);
+  height: var( --charwidth);
+  border: var( --borderwidth) var(--borderstyle) var(--fontcolor);
+  border-top: var(--transparentborder);
+  border-radius: 50%;
+  border-left: var(--transparentborder);
+}
+
+.capitalG::before {
+  left: var(--negativeborderwidth);
+  transform: rotate(45deg);
+}
+
+.capitalS::before {
+  left: calc(var(--borderwidth) * -1.75);
+  transform: rotate(-15deg);
+}
+
+.capitalA::before,
+.capitalE::before,
+.capitalF::before,
+.capitalG::before,
+.capitalH::before,
+.capitalS::before,
+.capitalAE::before,
+.capitalAA::before {
+  top: calc(var(--charwidth) + var(--borderwidth) * 2);
+}
+
+.capitalA::before,
+.capitalE::before,
+.capitalF::before,
+.capitalH::before,
+.capitalAE::before,
+.capitalAA::before {
+  left: 0;
+  left: calc(var(--borderwidth) * -1);
+}
+
+.f::after {
+  top: calc(var(--charheight) - var(--borderwidth) - 3px);
+}
+
+.t::after {
+  top: calc(var(--charwidth) - var(--borderwidth));
+}
+
+.i::before,
+.j::after,
+.aa::before,
+.capitalAA::after {
+  top: calc(var(--borderwidth) * -1.5);
+  width: var(--borderwidth);
+  height: var(--borderwidth);
+  border-radius: 50%;
+  background-color: var(--fontcolor);
+}
+
+.capitalAA::after {
+  width: calc(var(--borderwidth) * 1.25);
+  height: calc(var(--borderwidth) * 1.25);
+}
+
+.i::before {
+  left: 0;
+}
+
+.j::after {
+  right: var(--negativeborderwidth);
+}
+
+.capitalAA::after,
+.aa::before {
+  right: calc(var(--charwidth) / 2 - var(--borderwidth) * 1.5);
+}
+
+.capitalAA::after {
+  top: calc(var(--borderwidth) * -3);
+}
+
+.aa::before {
+  top: calc(var(--borderwidth) * -2.5);
+}
+
+.space {
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.zero,
+.two {
+  border-radius: 50%;
+}
+
+.one {
+  border-bottom: 0;
+  border-left: var(--transparentborder); 
+}
+
+.two {
+  border-bottom: var(--transparentborder);
+  border-left: var(--transparentborder); 
+}
+
+.four {
+  height: calc(var(--charheight) / 2 + var(--borderwidth));
+  top: calc(var(--charheight) / 2 - var(--borderwidth) * 2);
+  border-top: 0;
+  border-bottom: 0;
+  border-left: 0;
+}
+
+.four::before {
+  height: calc(var(--charwidth) + var(--borderwidth));
+  top: calc(var(--negativecharwidth) + var(--borderwidth));
+  left: 0;
+  border-top: 0;
+  border-top: var(--transparentborder); 
+  border-right: var(--transparentborder); 
+}
+
+.one,
+.four,
+.four::before {
+  border-radius: 75% 0 0 0 / 50% 0 0 0;
+
+}
+
+.five {
+  border-right: 0;
+  border-bottom: var(--transparentborder); 
+  border-radius: 0 0 0 100% / 0 0 0 50%;
+}
+
+.five::after,
+.nine::after {
+  left: var(--negativeborderwidth);
+  border-top: var(--transparentborder); 
+  border-left: var(--transparentborder); 
+  border-radius: 0 50% 50% 50% / 0 50% 50% 50%;
+}
+
+.five::after {
+  width: calc(100% + var(--borderwidth) * 1.5);
+  height: calc(100% + 17.5vmin);
+  height: calc(var(--charwidth) + var(--borderwidth) / 2);
+  top: calc(100% - var(--borderwidth) / 2);
+  left: calc(var(--borderwidth) * -1.5);
+  border-radius: 0 80% 50% 50% / 0 50% 50% 50%;
+}
+
+.seven::after {
+  border-bottom: 0;
+  border-radius: 50% 50% 0 0 / 50% 50% 0 0;
+}
+
+.nine {
+  border-radius: 50%;
+  height: calc(var(--charheight) / 2 + var(--borderwidth));
+  margin-top: calc(var(--borderwidth) * 2);
+}
+
+.nine::after {
+  width: var(--charwidth);
+  height: calc(var(--charheight) * 0.7);
+  top: calc(var(--charheight) / 5);
+  right: var(--negativeborderwidth);
+  border-radius: 0 0 100% 100% / 0 0 75% 75%;
+}
