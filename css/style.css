@@ -39,6 +39,7 @@ body {
 h1 {
   margin: 5vw;
   font-weight: 800;
+  font-size: 100px;
 }
 
 .alphabet {
@@ -78,7 +79,7 @@ h1 {
 }
 
 
-.alphabet:nth-of-type(n+2) {
+.alphabet:nth-of-type(n+3) {
   --borderstyle: double;
 }
 
