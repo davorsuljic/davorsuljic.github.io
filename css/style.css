@@ -34,12 +34,18 @@ body {
   width: 100%;
   font-family: 'JetBrains Mono', monospace;
   background-color: var(--bodybackgroundcolor);
+  line-height: 1.5;
 }
 
 h1 {
   margin: 5vw;
   font-weight: 800;
   font-size: 100px;
+  letter-spacing: -5px;
+}
+
+p {
+  margin: 5vw;
 }
 
 .alphabet {
