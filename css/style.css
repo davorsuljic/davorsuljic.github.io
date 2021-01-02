@@ -1,25 +1,12 @@
 :root {
     --bodybackgroundcolor: rgb(234, 234, 222);
     --fontcolor: rgb(53, 49, 46);
-    --fontbackgroundcolorred: rgb(243,70,46);
-    --fontbackgroundcolorblue: rgb(38,114,137);
-    --fontbackgroundcoloryellow: rgb(243,183,60);
-
-    --borderwidth: 10px;
-    --charwidth: 60px;
-    --charheight: 100px;
-
-    --borderwidth: 10px;
-    --charwidth: 80px;
-    --charheight: 130px;
-
-    --borderwidth: 13px;
-    --charwidth: 55px;
-    --charheight: 89px;
+    --fontbackgroundcolorred: rgb(243, 70, 46);
+    --fontbackgroundcolorred: rgb(253, 75, 74);
+    --fontbackgroundcolorblue: rgb(38, 114, 137);
+    --fontbackgroundcoloryellow: rgb(243, 183, 60);
 
     --borderwidth: 8px;
-    --charwidth: 34px;
-    --charheight: 55px;
     --charwidth: 55px;
     --charheight: 89px;
 
@@ -45,13 +32,18 @@ body {
 body {
   overflow-x: hidden;
   width: 100%;
-  font-family: sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   background-color: var(--bodybackgroundcolor);
 }
 
+h1 {
+  margin: 5vw;
+  font-weight: 800;
+}
+
 .alphabet {
-  width: 80vw;
-  margin: 10vw auto;
+  width: 90vw;
+  margin: 5vw auto;
 }
 
 .alphabetchar {
@@ -63,6 +55,31 @@ body {
   position: relative;
   color: rgba(0, 0, 0, 0);
   font-size: 100px;
+}
+
+.alphabet:nth-child(3) .alphabetchar:nth-child(odd) {
+    background-color: var(--fontbackgroundcolorred);
+}
+
+.alphabet:nth-child(3) .alphabetchar:nth-child(3n+3) {
+    background-color: var(--fontbackgroundcoloryellow);
+}
+
+.alphabet:nth-child(3) .alphabetchar:nth-child(2n+8) {
+    background-color: var(--fontbackgroundcolorblue);
+}
+
+.alphabet:nth-child(4) .alphabetchar {
+    box-shadow: 5px 5px 8px rgba(53, 49, 46, .8);
+}
+
+.alphabet:nth-child(5) .alphabetchar {
+    box-shadow: inset 5px 5px 8px rgba(53, 49, 46, .8);
+}
+
+
+.alphabet:nth-child(n+2) {
+  --borderstyle: double;
 }
 
 .capital {
@@ -87,6 +104,7 @@ body {
 
 .capitalA,
 .capitalM,
+.capitalM::before,
 .capitalN,
 .capitalG::after,
 .capitalQ::before,
@@ -96,12 +114,14 @@ body {
 .oe::before,
 .capitalAE,
 .capitalAE::after,
-.capitalAA {
+.capitalAA,
+.e::after {
   border: var(--borderwidth) var(--borderstyle) var(--fontcolor);
 }
 
 .capitalA,
 .capitalM,
+.capitalM::before,
 .capitalN,
 .capitalAE,
 .capitalAA {
@@ -167,6 +187,7 @@ body {
 .capitalI,
 .capitalK,
 .capitalM,
+.capitalM::before,
 .capitalN,
 .capitalP,
 .capitalR,
@@ -225,7 +246,7 @@ body {
 
 .capitalM {
   margin-right: var(--charwidth);
-  filter: drop-shadow(calc(var(--charwidth) - var(--borderwidth)) 0 0 var(--fontcolor));
+  /*filter: drop-shadow(calc(var(--charwidth) - var(--borderwidth)) 0 0 var(--fontcolor));*/
 }
 
 /*.capitalM::before {
@@ -237,10 +258,12 @@ body {
 }*/
 
 /*.capitalN::before,*/
+.capitalM::before,
 .capitalT::before,
 .capitalOE::before,
 .oe::before,
-.capitalAE::after {
+.capitalAE::after,
+.e::after {
   top: var(--negativeborderwidth);
 }
 
@@ -290,6 +313,11 @@ body {
   height: inherit;
 }
 
+.e::after {
+  width: var(--charwidth);
+  height: var(--charheight);
+}
+
 .nl {
   width: 100%;
   height: 0;
@@ -322,7 +350,8 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 .h::before,
 .k::before,
 .capitalOE::before,
-.oe::before {
+.oe::before,
+.e::after {
   left: var(--negativeborderwidth);
 }
 
@@ -331,12 +360,14 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 }
 
 .c,
+.e::after,
 .o {
   border-radius: 100% / 50%;
 }
 
 .capitalC,
 .c,
+.e::after,
 .capitalG {
   border-right: var(--transparentborder); 
 }
@@ -392,6 +423,7 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 .i {
   width: var(--borderwidth);
   border-bottom: 0;
+  z-index: 10;
 }
 
 .j {
@@ -445,9 +477,11 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 }
 
 .k::before {
-  height: calc(var(--charheight) / 2);
-  top: calc(var(--charwidth) - var(--borderwidth));
+  height: calc(var(--charheight) / 2 - var(--borderwidth) / 2);
+  top: calc(var(--charwidth) - var(--borderwidth) + 1px);
   border-radius: 0 0 60% 0 / 0 0 65% 0;
+  border-radius: 0 0 50% 0 / 0 0 50% 0;
+  border-radius: 0 0 50% 0 / 0 0 68.75% 0;
 }
 
 .capitalK::before {
@@ -481,7 +515,8 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 .capitalK::after,
 .k::after,
 .capitalR::after {
-  bottom: 0;
+  /*bottom: 0;*/
+  top: calc(var(--charheight) - var(--borderwidth));
 }
 
 .capitalB::after,
@@ -724,14 +759,15 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 
 /*.capitalX,*/
 .x {
-  height: calc(var(--charheight) / 2);
+  /*height: calc(var(--charheight) / 2);*/
   margin-top: var(--borderwidth);
   margin-left: calc(var(--borderwidth) / -2);
 }
 
 .capitalX::after,
 .x::after {
-  height: calc(var(--charheight) / 2 + var(--borderwidth));
+  height: calc(var(--charheight) / 2 + var(--borderwidth) * 1.25);
+  height: var(--charwidth);
   position: absolute;
   top: 100%;
   left: var(--negativeborderwidth);
@@ -750,9 +786,12 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 .two,
 .three,
 .five,
-.seven {
+.seven,
+.x {
   height: calc(var(--charheight) / 2);
   margin-top: var(--borderwidth);
+  height: calc(var(--charheight) / 2 - var(--borderwidth) / 4);
+  /*top: calc(var(--charwidth) - var(--borderwidth) + 1px);*/
 }
 
 .capitalZ,
@@ -773,7 +812,7 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 
 .capitalZ::after,
 .z::after,
-.e::after,
+/*.e::after,*/
 .ae::after,
 .two::after,
 .five::after,
@@ -804,7 +843,7 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
   border-radius: 100% 50% 0 0 / 75% 0 0 0;
 }
 
-.e::after,
+/*.e::after,*/
 .ae::after {
   width: calc(100% + var(--borderwidth) * 2);
   left: var(--negativeborderwidth);
@@ -813,9 +852,17 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
   border-radius: 0 0 90% 90% / 0 0 75% 75%;
 }
 
+/*.e::after {
+  height: calc(var(--charheight) / 2);
+}*/
+
+.capitalM::before,
+.ae:after {
+  left: 100%;
+}
+
 .ae:after {
   height: calc(var(--charheight) / 2);
-  left: 100%;
   top: 50%;
 }
 
@@ -888,7 +935,7 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 
 .capitalG::before {
   left: var(--negativeborderwidth);
-  transform: rotate(45deg);
+  transform: rotate(51deg);
 }
 
 .capitalS::before {
@@ -900,11 +947,16 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 .capitalE::before,
 .capitalF::before,
 .capitalG::before,
-.capitalH::before,
 .capitalS::before,
 .capitalAE::before,
 .capitalAA::before {
   top: calc(var(--charwidth) + var(--borderwidth) * 2);
+  top: calc(var(--charheight) - var(--borderwidth) * 2);
+}
+
+.capitalH::before {
+  top: calc(var(--charheight) - var(--borderwidth));
+
 }
 
 .capitalA::before,
