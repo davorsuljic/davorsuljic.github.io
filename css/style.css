@@ -57,28 +57,28 @@ h1 {
   font-size: 100px;
 }
 
-.alphabet:nth-child(3) .alphabetchar:nth-child(odd) {
+.alphabet:nth-of-type(3) .alphabetchar:nth-child(odd) {
     background-color: var(--fontbackgroundcolorred);
 }
 
-.alphabet:nth-child(3) .alphabetchar:nth-child(3n+3) {
+.alphabet:nth-of-type(3) .alphabetchar:nth-child(3n+3) {
     background-color: var(--fontbackgroundcoloryellow);
 }
 
-.alphabet:nth-child(3) .alphabetchar:nth-child(2n+8) {
+.alphabet:nth-of-type(3) .alphabetchar:nth-child(2n+8) {
     background-color: var(--fontbackgroundcolorblue);
 }
 
-.alphabet:nth-child(4) .alphabetchar {
+.alphabet:nth-of-type(4) .alphabetchar {
     box-shadow: 5px 5px 8px rgba(53, 49, 46, .8);
 }
 
-.alphabet:nth-child(5) .alphabetchar {
+.alphabet:nth-of-type(5) .alphabetchar {
     box-shadow: inset 5px 5px 8px rgba(53, 49, 46, .8);
 }
 
 
-.alphabet:nth-child(n+2) {
+.alphabet:nth-of-type(n+2) {
   --borderstyle: double;
 }
 
