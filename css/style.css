@@ -61,7 +61,7 @@ p {
   width: var(--charwidth);
   height: var(--charheight);
   border: var(--borderwidth) var(--borderstyle) var(--fontcolor);
-  margin: var(--charwidth) var(--borderwidth);
+  margin: var(--charwidth) calc(var(--borderwidth) / 2);
   position: relative;
   color: rgba(0, 0, 0, 0);
   font-size: 100px;
@@ -88,7 +88,7 @@ p {
 }
 
 
-.alphabet:nth-of-type(n+3) {
+.alphabet:nth-of-type(n+4) {
   --borderstyle: double;
 }
 
