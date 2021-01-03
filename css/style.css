@@ -35,6 +35,7 @@ body {
   font-family: 'JetBrains Mono', monospace;
   font-size: 21px;
   background-color: var(--bodybackgroundcolor);
+  color: var(--fontcolor);
   line-height: 1.5;
 }
 
