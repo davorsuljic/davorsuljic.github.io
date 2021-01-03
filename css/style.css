@@ -88,7 +88,7 @@ p {
 }
 
 
-.alphabet:nth-of-type(n+4) {
+.alphabet:nth-of-type(n+2) {
   --borderstyle: double;
 }
 
