@@ -33,6 +33,7 @@ body {
   overflow-x: hidden;
   width: 100%;
   font-family: 'JetBrains Mono', monospace;
+  font-size: 21px;
   background-color: var(--bodybackgroundcolor);
   line-height: 1.5;
 }
@@ -40,8 +41,9 @@ body {
 h1 {
   margin: 5vw;
   font-weight: 800;
-  font-size: 100px;
+  font-size: 89px;
   letter-spacing: -5px;
+  line-height: 1;
 }
 
 p {
