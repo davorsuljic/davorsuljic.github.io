@@ -1,5 +1,5 @@
 :root {
-    --bodybackgroundcolor: rgb(234, 234, 222);
+    --bodybackgroundcolor: rgb(239, 227, 211);
     --fontcolor: rgb(53, 49, 46);
     --fontbackgroundcolorred: rgb(243, 70, 46);
     --fontbackgroundcolorred: rgb(253, 75, 74);
@@ -13,7 +13,7 @@
     --negativecharwidth: calc(var(--charwidth) * -1);
     --negativeborderwidth: calc(var(--borderwidth) * -1);
     --borderstyle: solid;
-    --transparentborder: var(--borderwidth) var(--borderstyle) rgba(0, 0, 0, 0); 
+    --transparentborder: var(--borderwidth) var(--borderstyle) rgba(0, 0, 0, 0);
 }
 
 *,
@@ -69,6 +69,10 @@ p {
 
 .alphabet:nth-of-type(3) .alphabetchar:nth-child(odd) {
     background-color: var(--fontbackgroundcolorred);
+}
+
+.alphabet:nth-of-type(3) .alphabetchar:nth-child(even) {
+    background-color: var(--fontbackgroundcolorblue);
 }
 
 .alphabet:nth-of-type(3) .alphabetchar:nth-child(3n+3) {
@@ -314,7 +318,7 @@ p {
 .capitalX,
 .capitalY::before,
 .capitalZ {
-  height: var(--charheight);  
+  height: var(--charheight);
 }
 
 .oe::before,
@@ -379,7 +383,7 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 .c,
 .e::after,
 .capitalG {
-  border-right: var(--transparentborder); 
+  border-right: var(--transparentborder);
 }
 
 .capitalC,
@@ -419,7 +423,7 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
   top: calc(var(--negativecharwidth) + 3px);
   margin-right: calc(var(--borderwidth) * -2.75);
   margin-left: calc(var(--borderwidth) * 1.25);
-  border-top: var(--transparentborder); 
+  border-top: var(--transparentborder);
   border-radius: 50% 0 0 0 / 14.25% 0 0 0;
 }
 
@@ -439,19 +443,19 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 .j {
   width: calc(var(--charwidth) - var(--borderwidth));
   height: calc(var(--charheight) + var(--charwidth) - 3px);
-  margin-left: calc(var(--borderwidth) * -3.25); 
-  border-bottom: var(--transparentborder); 
+  margin-left: calc(var(--borderwidth) * -3.25);
+  border-bottom: var(--transparentborder);
   border-radius: 0 0 55% 0 / 0 0 20% 0;
 }
 
 .g::before,
 .four::before {
   bottom: var(--negativecharwidth);
-  left: var(--negativeborderwidth); 
+  left: var(--negativeborderwidth);
   width: var(--charwidth);
   height: var(--charwidth);
   border: var(--borderwidth) var(--borderstyle) var(--fontcolor);
-  border-top: var(--transparentborder); 
+  border-top: var(--transparentborder);
   border-radius: 50% 0 50% 0 / 50% 0 50% 0;
 }
 
@@ -473,7 +477,7 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 .t {
   height: calc(var(--charheight) + var(--charwidth));
   border-radius: 0 0 0 55% / 0 0 0 20%;
-  border-bottom: var(--transparentborder); 
+  border-bottom: var(--transparentborder);
   margin-left: 10px;
   margin-right: calc(var(--charwidth) / -2);
 }
@@ -550,7 +554,7 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 
   height: var(--charwidth);
   border-radius: 0 50% 50% 0 / 0 50% 50% 0;
-  
+
 }
 
 .capitalK::after,
@@ -598,7 +602,7 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 }
 
 .r {
-  border-right: var(--transparentborder); 
+  border-right: var(--transparentborder);
   margin-right: calc(var(--borderwidth) / -2);
 }
 
@@ -606,7 +610,7 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 .s,
 .six {
   border-right: var(--transparentborder);
-  border-bottom: var(--transparentborder); 
+  border-bottom: var(--transparentborder);
 }
 
 .six {
@@ -653,8 +657,8 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 
 .capitalS::after,
 .s:after {
-  border-left: var(--transparentborder); 
-  border-top: var(--transparentborder); 
+  border-left: var(--transparentborder);
+  border-top: var(--transparentborder);
   top: calc(100% + var(--borderwidth));
 }
 
@@ -678,16 +682,16 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 }
 
 .three {
-  border-bottom: var(--transparentborder); 
+  border-bottom: var(--transparentborder);
 }
 
 .three,
 .three::after {
-  border-left: var(--transparentborder); 
+  border-left: var(--transparentborder);
 }
 
 .three::after {
-  border-top: var(--transparentborder); 
+  border-top: var(--transparentborder);
   left: var(--negativeborderwidth);
 }
 
@@ -705,7 +709,7 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 
 .capitalX {
   border-radius: 0 0 50% 50% / 0 0 50% 50%;
-  border-radius: 0 0 50% 50% / 0 0 67.5% 67.5%;  
+  border-radius: 0 0 50% 50% / 0 0 67.5% 67.5%;
 }
 
 .v,
@@ -722,7 +726,7 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 .capitalU,
 .capitalY::before {
   border-radius: 0 0 100% 100% / 0 0 37.5% 37.5%;
-  border-radius: 0 0 0 50% / 0 0 0 25%;
+  border-radius: 0 0 0 50% / 0 0 0 31.25%;
 }
 
 .u,
@@ -807,7 +811,7 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 .capitalZ,
 .z,
 .seven {
-  border-bottom: var(--transparentborder); 
+  border-bottom: var(--transparentborder);
   border-left: 0;
   border-radius: 0 0 100% 50% / 0 0 100% 50%;
 }
@@ -848,7 +852,7 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 .z::after,
 .two::after,
 .seven::after {
-  border-top: var(--transparentborder); 
+  border-top: var(--transparentborder);
   border-right: 0;
   border-radius: 100% 50% 0 0 / 75% 0 0 0;
 }
@@ -857,8 +861,8 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 .ae::after {
   width: calc(100% + var(--borderwidth) * 2);
   left: var(--negativeborderwidth);
-  border-top: var(--transparentborder); 
-  border-right: var(--transparentborder); 
+  border-top: var(--transparentborder);
+  border-right: var(--transparentborder);
   border-radius: 0 0 90% 90% / 0 0 75% 75%;
 }
 
@@ -901,11 +905,10 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 .capitalA::before,
 .capitalE::before,
 .capitalF::before,
-.capitalG::before,
 .capitalH::before,
 .capitalS::before,
 .capitalAE::before,
-.capitalAA::before,
+.capitalAA::after,
 .f::after,
 .t::after {
   left: 0;
@@ -916,14 +919,14 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 
 .capitalA::before,
 .capitalH::before,
-.capitalAA::before {
+.capitalAA::after {
   width: var(--charwidth);
   left: calc(var(--borderwidth) * -2);
 }
 
 .capitalE::before,
 .capitalF::before {
-  width: calc(var(--charwidth) - var(--borderwidth));  
+  width: calc(var(--charwidth) - var(--borderwidth));
 }
 
 .f::after,
@@ -932,7 +935,6 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
   left: calc(var(--borderwidth) * -2);
 }
 
-.capitalG::before,
 .capitalS::before {
   width: calc(var(--charwidth) - var(--borderwidth) * 2);
   width: var(--charwidth);
@@ -943,11 +945,6 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
   border-left: var(--transparentborder);
 }
 
-.capitalG::before {
-  left: var(--negativeborderwidth);
-  transform: rotate(51deg);
-}
-
 .capitalS::before {
   left: calc(var(--borderwidth) * -1.75);
   transform: rotate(-15deg);
@@ -956,10 +953,9 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 .capitalA::before,
 .capitalE::before,
 .capitalF::before,
-.capitalG::before,
 .capitalS::before,
 .capitalAE::before,
-.capitalAA::before {
+.capitalAA::after {
   top: calc(var(--charwidth) + var(--borderwidth) * 2);
   top: calc(var(--charheight) - var(--borderwidth) * 2);
 }
@@ -974,7 +970,7 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 .capitalF::before,
 .capitalH::before,
 .capitalAE::before,
-.capitalAA::before {
+.capitalAA::after {
   left: 0;
   left: calc(var(--borderwidth) * -1);
 }
@@ -988,9 +984,9 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 }
 
 .i::before,
-.j::after,
-.aa::before,
-.capitalAA::after {
+/* .j::after, */
+.aa::before {
+/* .capitalAA::after { */
   top: calc(var(--borderwidth) * -1.5);
   width: var(--borderwidth);
   height: var(--borderwidth);
@@ -998,30 +994,56 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
   background-color: var(--fontcolor);
 }
 
-.capitalAA::after {
+/* .capitalAA::after {
   width: calc(var(--borderwidth) * 1.25);
   height: calc(var(--borderwidth) * 1.25);
-}
+} */
 
 .i::before {
   left: 0;
 }
 
-.j::after {
+/* .j::after {
   right: var(--negativeborderwidth);
-}
+} */
 
-.capitalAA::after,
+/* .capitalAA::after, */
 .aa::before {
   right: calc(var(--charwidth) / 2 - var(--borderwidth) * 1.5);
 }
 
-.capitalAA::after {
+/* .capitalAA::after {
   top: calc(var(--borderwidth) * -3);
-}
+} */
 
 .aa::before {
   top: calc(var(--borderwidth) * -2.5);
+}
+
+.tittle::before {
+  --tittleborderwidth: 7px;
+  width: calc(var(--borderwidth) * 1.25);
+  height: calc(var(--borderwidth) * 1.25);
+  width: var(--borderwidth);
+  height: var(--borderwidth);
+  background-color: rgba(0, 0, 0, 0);
+  border: var(--borderwidth) var(--borderstyle) var(--fontcolor);
+  border: var(--tittleborderwidth) var(--borderstyle) var(--fontcolor);
+  border-radius: 50%;
+  top: calc(var(--borderwidth) - 34px);
+  left: calc(50% - var(--tittleborderwidth));
+}
+
+.i.tittle::before,
+.j.tittle::before {
+  --tittleborderwidth: 4px;
+  top: -13px;
+  left: 100%;
+}
+
+.aa.tittle::before {
+  --tittleborderwidth: 5px;
+  top: -21px;
 }
 
 .space {
@@ -1035,12 +1057,12 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 
 .one {
   border-bottom: 0;
-  border-left: var(--transparentborder); 
+  border-left: var(--transparentborder);
 }
 
 .two {
   border-bottom: var(--transparentborder);
-  border-left: var(--transparentborder); 
+  border-left: var(--transparentborder);
 }
 
 .four {
@@ -1056,8 +1078,8 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
   top: calc(var(--negativecharwidth) + var(--borderwidth));
   left: 0;
   border-top: 0;
-  border-top: var(--transparentborder); 
-  border-right: var(--transparentborder); 
+  border-top: var(--transparentborder);
+  border-right: var(--transparentborder);
 }
 
 .one,
@@ -1069,15 +1091,15 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 
 .five {
   border-right: 0;
-  border-bottom: var(--transparentborder); 
+  border-bottom: var(--transparentborder);
   border-radius: 0 0 0 100% / 0 0 0 50%;
 }
 
 .five::after,
 .nine::after {
   left: var(--negativeborderwidth);
-  border-top: var(--transparentborder); 
-  border-left: var(--transparentborder); 
+  border-top: var(--transparentborder);
+  border-left: var(--transparentborder);
   border-radius: 0 50% 50% 50% / 0 50% 50% 50%;
 }
 
