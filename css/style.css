@@ -1,3 +1,106 @@
+:root {
+  --fontsize: 21px;
+  --lineheight: 1.625;
+  --horizontalcell: 7.69230769231vw;
+  --verticalcell: 12.5vh;
+
+    --hero-bg-color: rgb(236 236 205);
+    /* --hero-bg-color: rgb(231,231,191); */
+    /* --hero-bg-color: rgb(225,225,177); */
+    --stroke-color: rgb(64 59 55);
+    --stroke-color2: rgb(53 49 46);
+    --stroke-color3: rgb(40 38 35);
+    --stroke-color-dark: rgb(16 15 14);
+    --stroke-color-light: rgb(64 59 55 / .13);
+    --stroke-color-light2: rgb(64 59 55 / .8);
+    --bluecolor: rgb(38 114 137);
+    --bluecolor-light: rgb(38 114 137 / .21);
+    --redcolor: rgb(253 75 74);
+    --redcolor2: rgb(235 111 81);
+    --lightredcolor2: rgb(253 75 74 / .5);
+    /* --redcolor: rgb(206 116 72); */
+    /* --redcolor: rgb(153 117 117); */
+    --lightredcolor: rgb(236 236 225 / .5);
+    --lightredcolor: rgb(236 236 225 / 0.6153);
+    --lightredcolor: rgb(236 236 225 / 0.75);
+    --lightredcolor: rgb(236 236 215 / .75);
+    --lightredcolor: rgb(236 236 205 / .75);
+    --yellowcolor: rgb(243 183 60);
+
+    --transparentcolor: rgb(0 0 0 / 0);
+
+    --columnwidth: 4.7619047619vw; /*21*/
+    --columnheight: 7.69230769231vh; /*13*/
+    /* --columnwidth: 2.94117647059vw;
+    --columnheight: 4.7619047619vh;  */
+
+	--fontbackgroundcolorred: rgb(243, 70, 46);
+    --fontbackgroundcolorred: rgb(253, 75, 74);
+    --fontbackgroundcolorblue: rgb(38, 114, 137);
+    --fontbackgroundcoloryellow: rgb(243, 183, 60);
+
+    --borderwidth: 8px;
+    --charwidth: 55px;
+    --charheight: 89px;
+
+    --negativecharwidth: calc(var(--charwidth) * -1);
+    --negativeborderwidth: calc(var(--borderwidth) * -1);
+    --borderstyle: solid;
+    --transparentborder: var(--borderwidth) var(--borderstyle) rgba(0, 0, 0, 0);
+
+}
+
+*,
+::before,
+::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  background-color: var(--stroke-color);
+  color: var(--hero-bg-color);
+}
+
+::selection {
+  background-color: var(--stroke-color);
+  color: var(--hero-bg-color);
+}
+
+html {
+  height: -webkit-fill-available;
+  scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+    height: 100vh;
+
+}
+
+body {
+  font-family: 'Inconsolata', monospace;
+  font-size: var(--fontsize);
+  line-height: var(--lineheight);
+  letter-spacing: 1px;
+  font-kerning: normal;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background-color: var(--stroke-color);
+  /* background-color: var(--stroke-color-dark); */
+  color: var(--stroke-color);
+}
+
+body,
+#alphabet {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+section {
+
+}
 
 .alphabet {
   width: 90vw;
@@ -1080,112 +1183,6 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
 }
 
 /********************************************************************/
-
-
-
-:root {
-  --fontsize: 21px;
-  --lineheight: 1.625;
-  --horizontalcell: 7.69230769231vw;
-  --verticalcell: 12.5vh;
-
-    --hero-bg-color: rgb(236 236 205);
-    /* --hero-bg-color: rgb(231,231,191); */
-    /* --hero-bg-color: rgb(225,225,177); */
-    --stroke-color: rgb(64 59 55);
-    --stroke-color2: rgb(53 49 46);
-    --stroke-color3: rgb(40 38 35);
-    --stroke-color-dark: rgb(16 15 14);
-    --stroke-color-light: rgb(64 59 55 / .13);
-    --stroke-color-light2: rgb(64 59 55 / .8);
-    --bluecolor: rgb(38 114 137);
-    --bluecolor-light: rgb(38 114 137 / .21);
-    --redcolor: rgb(253 75 74);
-    --redcolor2: rgb(235 111 81);
-    --lightredcolor2: rgb(253 75 74 / .5);
-    /* --redcolor: rgb(206 116 72); */
-    /* --redcolor: rgb(153 117 117); */
-    --lightredcolor: rgb(236 236 225 / .5);
-    --lightredcolor: rgb(236 236 225 / 0.6153);
-    --lightredcolor: rgb(236 236 225 / 0.75);
-    --lightredcolor: rgb(236 236 215 / .75);
-    --lightredcolor: rgb(236 236 205 / .75);
-    --yellowcolor: rgb(243 183 60);
-
-    --transparentcolor: rgb(0 0 0 / 0);
-
-    --columnwidth: 4.7619047619vw; /*21*/
-    --columnheight: 7.69230769231vh; /*13*/
-    /* --columnwidth: 2.94117647059vw;
-    --columnheight: 4.7619047619vh;  */
-
-	--fontbackgroundcolorred: rgb(243, 70, 46);
-    --fontbackgroundcolorred: rgb(253, 75, 74);
-    --fontbackgroundcolorblue: rgb(38, 114, 137);
-    --fontbackgroundcoloryellow: rgb(243, 183, 60);
-
-    --borderwidth: 8px;
-    --charwidth: 55px;
-    --charheight: 89px;
-
-    --negativecharwidth: calc(var(--charwidth) * -1);
-    --negativeborderwidth: calc(var(--borderwidth) * -1);
-    --borderstyle: solid;
-    --transparentborder: var(--borderwidth) var(--borderstyle) rgba(0, 0, 0, 0);
-
-}
-
-*,
-::before,
-::after {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-
-::-moz-selection {
-  background-color: var(--stroke-color);
-  color: var(--hero-bg-color);
-}
-
-::selection {
-  background-color: var(--stroke-color);
-  color: var(--hero-bg-color);
-}
-
-html {
-  height: -webkit-fill-available;
-  scroll-behavior: smooth;
-}
-
-html, body {
-    height: 100%;
-    height: 100vh;
-
-}
-
-body {
-  font-family: 'Inconsolata', monospace;
-  font-size: var(--fontsize);
-  line-height: var(--lineheight);
-  letter-spacing: 1px;
-  font-kerning: normal;
-  overflow-x: auto;
-  overflow-y: hidden;
-  background-color: var(--stroke-color);
-  /* background-color: var(--stroke-color-dark); */
-  color: var(--stroke-color);
-}
-
-body,
-#alphabet {
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-section {
-
-}
 
 h2 {
   font-size: calc(21px + 2vw);
