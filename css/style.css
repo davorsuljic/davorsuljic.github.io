@@ -1678,6 +1678,7 @@ h1 span::selection {
 .logo .letter-s {
   margin-left: 5.91715976331vw;
   margin-left: calc(3.55029585799vw + 0.38461538462vmin * 5);
+  margin-left: 3.55029585799vw;
 }
 
 a {
