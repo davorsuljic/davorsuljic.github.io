@@ -1,55 +1,3 @@
-:root {
-    --bodybackgroundcolor: rgb(249, 245, 239);
-    --fontcolor: rgb(53, 49, 46);
-    --fontbackgroundcolorred: rgb(243, 70, 46);
-    --fontbackgroundcolorred: rgb(253, 75, 74);
-    --fontbackgroundcolorblue: rgb(38, 114, 137);
-    --fontbackgroundcoloryellow: rgb(243, 183, 60);
-
-    --borderwidth: 8px;
-    --charwidth: 55px;
-    --charheight: 89px;
-
-    --negativecharwidth: calc(var(--charwidth) * -1);
-    --negativeborderwidth: calc(var(--borderwidth) * -1);
-    --borderstyle: solid;
-    --transparentborder: var(--borderwidth) var(--borderstyle) rgba(0, 0, 0, 0);
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  overflow-x: hidden;
-  width: 100%;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 21px;
-  background-color: var(--bodybackgroundcolor);
-  color: var(--fontcolor);
-  line-height: 1.5;
-}
-
-h1 {
-  margin: 5vw;
-  font-weight: 800;
-  font-size: 89px;
-  letter-spacing: -5px;
-  line-height: 1;
-}
-
-p {
-  margin: 5vw;
-}
 
 .alphabet {
   width: 90vw;
@@ -1171,6 +1119,19 @@ border-radius: 100% 100% 100% 0 / 50% 50% 50% 0;
     /* --columnwidth: 2.94117647059vw;
     --columnheight: 4.7619047619vh;  */
 
+	--fontbackgroundcolorred: rgb(243, 70, 46);
+    --fontbackgroundcolorred: rgb(253, 75, 74);
+    --fontbackgroundcolorblue: rgb(38, 114, 137);
+    --fontbackgroundcoloryellow: rgb(243, 183, 60);
+
+    --borderwidth: 8px;
+    --charwidth: 55px;
+    --charheight: 89px;
+
+    --negativecharwidth: calc(var(--charwidth) * -1);
+    --negativeborderwidth: calc(var(--borderwidth) * -1);
+    --borderstyle: solid;
+    --transparentborder: var(--borderwidth) var(--borderstyle) rgba(0, 0, 0, 0);
 
 }
 
