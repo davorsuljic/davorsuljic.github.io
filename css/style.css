@@ -70,7 +70,7 @@
 
 html {
   height: -webkit-fill-available;
-  scroll-behavior: smooth;
+  /*scroll-behavior: smooth;*/
 }
 
 html, body {
