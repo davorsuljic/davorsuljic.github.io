@@ -1,0 +1,14 @@
+:root {
+    --black-color: rgb(249,245,239);
+  --fibonaccifontcolor: rgb(53, 49, 46);
+  --fibonaccifontcolor: rgb(64, 59, 55);
+
+}
+
+body {
+  font-size: 100px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  overflow-x: hidden;
+  background-color: var(--black-color);
+}
