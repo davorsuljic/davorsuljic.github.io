@@ -101,6 +101,8 @@ body {
   /* background-size: min(7.69230769231vw, var(--columnwidth)) min(12.5%, var(--columnheight)), min(7.69230769231vw, var(--columnwidth)) min(12.5%, var(--columnheight)); */
   background-position:  -1px -1px, -1px -1px;
   background-color: var(--stroke-color);
+	background-color: var(--hero-bg-color);
+
   /* background-color: var(--stroke-color-dark); */
   color: var(--stroke-color);
 }
@@ -1272,11 +1274,11 @@ ul {
     flex-direction: row;
 }
 
-.hero,
+/*.hero,
 .info,
 #maincontent {
   background-color: var(--hero-bg-color);
-}
+}*/
 
 .hero {
   /* width: 261.538461539vw; */
