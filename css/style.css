@@ -93,6 +93,13 @@ body {
   font-kerning: normal;
   overflow-x: auto;
   overflow-y: hidden;
+	background-image:
+                    linear-gradient(var(--bluecolor-light) 0 1px, var(--transparentcolor) 0 1px),
+                    linear-gradient(90deg, var(--bluecolor-light) 0 1px, var(--transparentcolor) 1px);
+  background-size: 7.69230769231vw 12.5%, 7.69230769231vw 12.5%;
+  background-size: var(--columnwidth) var(--columnheight), var(--columnwidth) var(--columnheight);
+  /* background-size: min(7.69230769231vw, var(--columnwidth)) min(12.5%, var(--columnheight)), min(7.69230769231vw, var(--columnwidth)) min(12.5%, var(--columnheight)); */
+  background-position:  -1px -1px, -1px -1px;
   background-color: var(--stroke-color);
   /* background-color: var(--stroke-color-dark); */
   color: var(--stroke-color);
@@ -1278,13 +1285,7 @@ ul {
   /* background-image:
                     linear-gradient(var(--stroke-color-light) 0 1px, var(--transparentcolor) 0 1px),
                     linear-gradient(90deg, var(--stroke-color-light) 0 1px, var(--transparentcolor) 1px); */
-  background-image:
-                    linear-gradient(var(--bluecolor-light) 0 1px, var(--transparentcolor) 0 1px),
-                    linear-gradient(90deg, var(--bluecolor-light) 0 1px, var(--transparentcolor) 1px);
-  background-size: 7.69230769231vw 12.5%, 7.69230769231vw 12.5%;
-  background-size: var(--columnwidth) var(--columnheight), var(--columnwidth) var(--columnheight);
-  /* background-size: min(7.69230769231vw, var(--columnwidth)) min(12.5%, var(--columnheight)), min(7.69230769231vw, var(--columnwidth)) min(12.5%, var(--columnheight)); */
-  background-position:  -1px -1px, -1px -1px;
+  
   /* background-position: 0 0, 0 0, 0 0; */
   /* background-repeat: repeat, repeat, no-repeat; */
 
@@ -1688,6 +1689,7 @@ a {
 }
 
 #maincontent {
+  min-width: 100vw;
   height: 100%;
   display: flex;
   flex-wrap: nowrap;
