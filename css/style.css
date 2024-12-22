@@ -80,6 +80,12 @@ html, body {
 }
 
 body {
+	display: grid;
+	grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
+	grid-auto-flow: column;
+	grid-auto-columns: minmax(160px,1fr);
+	overflow-x: auto;
+	overflow-y: hidden;
   font-family: 'Inconsolata', monospace;
   font-size: var(--fontsize);
   line-height: var(--lineheight);
@@ -1254,7 +1260,6 @@ ul {
   display: grid;
 }
 
-body,
 .hero {
     display: flex;
     align-items: flex-start;
