@@ -40,8 +40,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
       let alpha = event.alpha;
       console.log("alpha: " + alpha);
       let volumeval = 0;
-      /*wrapperdeg = alpha + 90;*/
-      wrapperdeg = alpha;
+      wrapperdeg = alpha + 90;
+      /*wrapperdeg = alpha;*/
       wrapper.style.transform = "rotate(" + wrapperdeg + "deg)";
 
       /*if (alpha >= 0 && alpha <= 100) {*/
