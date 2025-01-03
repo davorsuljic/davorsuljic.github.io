@@ -24,5 +24,40 @@
 </div>
 <p class="source">Source: <a href="https://blog.codepen.io/2014/02/18/001-big-idea/">CodePen Podcast #1: The Big Idea</a></p>
     </main>
+    <script>
+    /*
+ * Based on "Gyro-web: Accessing the device orientation in JavaScript"
+ * https://trekhleb.dev/blog/2021/gyro-web/
+ */
+
+document.addEventListener("DOMContentLoaded", function (event) {
+  if (window.DeviceOrientationEvent) {
+    let audioex = document.querySelector("#audio-example");
+    let wrapper = document.querySelector(".audio-wrapper");
+    let wrapperdeg = 0;
+
+    function handleOrientation(event) {
+      let alpha = event.alpha;
+      console.log("alpha: " + alpha);
+      let volumeval = 0;
+      /*wrapperdeg = alpha + 90;*/
+      wrapperdeg = alpha;
+      wrapper.style.transform = "rotate(" + wrapperdeg + "deg)";
+
+      /*if (alpha >= 0 && alpha <= 100) {*/
+      if (alpha >= 180 && alpha <= 280) {
+        alpha -= 180;
+        alpha = Math.round(100 - alpha);
+        volumeval = alpha;
+      }
+
+      audioex.volume = volumeval / 100;
+    }
+
+    window.addEventListener("deviceorientation", handleOrientation);
+  }
+});
+
+</script>
   </body>
 </html>
