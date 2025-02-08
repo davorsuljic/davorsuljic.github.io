@@ -51,6 +51,7 @@ margin: 36.8847vh auto;
   width: 12.5vw;
   height: 13vh;
   margin: calc(0.61538461538vmax * 3);
+  margin: calc(0.61538461538vmax * 3) calc(0.61538461538vmin / 4);
 }
 
 .fibonacci-grid div {
